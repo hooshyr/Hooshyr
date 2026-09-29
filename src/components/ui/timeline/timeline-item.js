@@ -2,7 +2,7 @@
 
 import { useInView } from 'react-intersection-observer'
 
-export const TimelineItem = ({ className = '', title, date, description, url, reverse }) => {
+export const TimelineItem = ({ className = '', title, date, location, description, highlights, url, reverse }) => {
 
 	const {inView, ref} = useInView({triggerOnce: true});
 
@@ -53,6 +53,11 @@ export const TimelineItem = ({ className = '', title, date, description, url, re
 			<h3 className="text-xl font-semibold">
 				{title}
 			</h3>
+			{location && (
+				<span className="block text-sm text-neutral-500 mt-1">
+					{location}
+				</span>
+			)}
 			<span className={`
 						absolute
 						lg:top-[4.2rem]
@@ -77,6 +82,18 @@ export const TimelineItem = ({ className = '', title, date, description, url, re
 					{description}
 				</p>
 			)}
+			{highlights?.map((group) => (
+				<div key={group.title} className="mt-6">
+					<h4 className="font-semibold text-white mb-2">
+						{group.title}
+					</h4>
+					<ul className="list-disc pl-5 space-y-2 text-neutral-400">
+						{group.items.map((item) => (
+							<li key={item}>{item}</li>
+						))}
+					</ul>
+				</div>
+			))}
 			{url && (
 				<div className="mt-6">
 					<a

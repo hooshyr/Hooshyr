@@ -17,8 +17,8 @@ const poppins = Poppins({
 	variable: '--font-poppins',
 })
 
-const description = 'Hooshyr is a web developer based in Tehran, Iran. He is passionate about web development.'
-const ogDescription = 'Alireza Hooshyar is a web developer based in Tehran, Iran. He is passionate about web development.'
+const description = 'Hooshyr is a front-end engineer at Divar, based in Tehran, Iran. Previously at Balad.'
+const ogDescription = 'Alireza Hooshyar is a front-end engineer at Divar, based in Tehran, Iran. Previously at Balad.'
 
 export const metadata = {
 	metadataBase: new URL('https://hooshyr.com'),

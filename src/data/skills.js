@@ -1,22 +1,22 @@
 export const skills = [
 	{
-		title: 'Server-side',
+		title: 'Front-end',
 		items: [
-			'Python | Django',
-			'PHP | WordPress',
-			'SQL | NoSQL',
-			'Celery | RabbitMQ',
-			'Nginx | Apache',
+			'TypeScript',
+			'React Js | Hooks',
+			'Next.Js | SSR',
+			'Redux | Context API',
+			'Web Performance',
 		],
 	},
 	{
-		title: 'Client-side',
+		title: 'Architecture',
 		items: [
-			'React Js',
-			'Next.Js | SSR',
-			'Redux | Context API',
-			'React Hooks',
-			'TypeScript',
+			'Monorepos',
+			'SDK Design',
+			'Auth & Sessions',
+			'Feature Flags',
+			'Interactive Maps',
 		],
 	},
 	{
@@ -25,18 +25,17 @@ export const skills = [
 			'Tailwind',
 			'SCSS',
 			'Styled Components',
-			'Bootstrap',
 			'Responsive Design',
 		],
 	},
 	{
-		title: 'Other',
+		title: 'Back-end & Other',
 		items: [
+			'Python | Django REST',
+			'Celery | Nginx',
 			'Git | Linux',
-			'Data Structures',
-			'SEO',
+			'Team Leadership',
 			'Agile | Scrum',
-			'Photoshop',
 		],
 	},
 ]

@@ -39,7 +39,7 @@ export const Projects = () => {
 	return (
 		<section id="projects" ref={ref} className="projects flex flex-col py-8">
 			<div className="container max-w-6xl mx-auto px-5 xl:px-0">
-				<WavoTitle>Other projects</WavoTitle>
+				<WavoTitle>Earlier projects</WavoTitle>
 				<div className="flex items-center mb-3 sm:mb-6 flex-wrap">
 					<div className="w-full sm:w-auto mb-3 sm:mb-0">
 						<ButtonGroup items={projectFilters} onChange={handleFilterChange} />

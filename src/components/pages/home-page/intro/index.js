@@ -45,11 +45,11 @@ export const Intro = () => {
 						</Highlighter>
 						&nbsp;
 						<span className="block">
-							Developer based in Tehran, Iran.
+							Engineer based in Tehran, Iran.
 						</span>
 					</h1>
 					<div className={`mb-8 lg:mb-16 text-md sm:text-xl text-neutral-400 animate__animated animate__delay-2s ${inView ? "animate__fadeIn" : ""}`}>
-						Coding Since 2016.
+						Coding since 2016.
 					</div>
 					<WavoButton
 						as="a"

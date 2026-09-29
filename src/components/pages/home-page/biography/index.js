@@ -9,22 +9,16 @@ export const Biography = () => {
 				<WavoTitle>My story</WavoTitle>
 				<div className="text-neutral-400 leading-8 text-lg">
 					<p className="mb-4">
-						My journey began with a passion for the creation of things, and programming doubled it.
+						I&apos;m a front-end engineer at Divar, Iran&apos;s largest classifieds marketplace, where I work on web platforms used by millions of people every day.
 					</p>
 					<p className="mb-4">
-						I started my programming career in high school with Html and CSS. Subsequently, I learned how to implement PHP and WordPress themes and became an expert in this area.
+						At Divar I architected the Authentication SDK that now powers every web platform in our monorepo, and led the migration from legacy auth to a modern token architecture without a minute of downtime. I also spearheaded the front-end of the interactive Real-Estate Map, which lets people switch between map and list views while searching for a home.
 					</p>
 					<p className="mb-4">
-						Later on, I started studying computer engineering at the Ferdowsi University of Mashhad, and I decided to focus on my technical skills more seriously and strengthen them. So, I started learning Django and React.Js simultaneously, and after a while, I implemented various projects.
+						Before joining Divar, I was a front-end engineer at Balad, Iran&apos;s map and navigation platform. Earlier, I co-founded Maivan and ChinoMarket, where I learned to own products end to end, from Django back-ends to Next.Js front-ends.
 					</p>
 					<p className="mb-4">
-						Over time, I have been able to work with a variety of technologies and tools, including Django-Rest-Framework, Celery, Nginx, and Django-Channels for the server-side and Redux, TypeScript, Sass, Styled-Components, and Tailwind for the client-side. Also, I&apos;m familiar with Git and Linux-based OSs like ubuntu.
-					</p>
-					<p className="mb-4">
-						After that, Front-End became my primary specialty, and I decided to work full time; I also used more technologies such as NextJS.
-					</p>
-					<p className="mb-4">
-						Due to this journey, I got into web development, which has since become my greatest passion and, fortunately, my job.
+						It all started in high school with HTML, CSS, and WordPress themes. I went on to study computer engineering at the Ferdowsi University of Mashhad and later earned an MBA in strategy from Kharazmi University, which shapes how I think about the products I build.
 					</p>
 					<div className="mb-4 flex items-center">
 						<span className="mr-2">
