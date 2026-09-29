@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+	Tailwind v4 compatibility: v3 defaulted borders to gray-200 and buttons to a
+	pointer cursor. Keep both so the design looks the same as before.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+
+	button:not(:disabled),
+	[role='button']:not(:disabled) {
+		cursor: pointer;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	::selection {
+		color: #fff;
+		background: var(--color-pink-600);
+	}
+}
+
+.projects .swiper {
+	--swiper-navigation-color: #fff;
+	--swiper-navigation-size: 22px;
+	--swiper-navigation-sides-offset: -4px;
+
+	padding-bottom: 100px;
+
+	.swiper-wrapper {
+		z-index: 51;
+	}
+
+	.swiper-scrollbar {
+		background-color: #fff;
+		bottom: 55px;
+		transform: scaleX(0.98);
+		overflow: hidden;
+	}
+
+	.swiper-scrollbar-drag {
+		background-color: var(--color-pink-600);
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			width: 100vw;
+			right: 99%;
+			background-color: var(--color-pink-600);
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		top: auto;
+		bottom: 35px;
+		z-index: 52;
+		backdrop-filter: blur(3px);
+	}
+}
+
+/* Per-character reveal used by <WordAnimator /> */
+@keyframes waChar {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.wa {
+	display: inline-block;
+}
+
+.wa__char {
+	display: inline-block;
+	opacity: 0;
+	animation-name: waChar;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+/* animate.css: stay hidden until the animation class is applied */
+.animate__animated {
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUpSmall {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 30%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.animate__fadeInUpSmall {
+	animation-name: fadeInUpSmall;
+}

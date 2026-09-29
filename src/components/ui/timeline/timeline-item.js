@@ -1,17 +1,19 @@
-import { useInView } from "react-intersection-observer"
+'use client'
 
-export const TimelineItem = ({ className, title, date, description, url, reverse }) => {
+import { useInView } from 'react-intersection-observer'
+
+export const TimelineItem = ({ className = '', title, date, description, url, reverse }) => {
 
 	const {inView, ref} = useInView({triggerOnce: true});
 
 	return (
 		<div ref={ref} className={`
 				relative
-				border-[2px]
-				w-[calc(100%_-_2.5rem)] lg:w-[calc(50%_-_2.5rem)] p-6
+				border-2
+				w-[calc(100%-2.5rem)] lg:w-[calc(50%-2.5rem)] p-6
 
 				before:content-['']
-				before:absolute before:top-[3rem]
+				before:absolute before:top-12
 				before:w-0 before:h-0
 				before:border-[1.2rem] before:border-transparent
 
@@ -32,11 +34,11 @@ export const TimelineItem = ({ className, title, date, description, url, reverse
 				after:border-2 after:border-pink-600
 				
 				after:translate-x-1/2
-				after:right-[calc(100%_+_2.5rem_+_2px)]
+				after:right-[calc(100%+2.5rem+2px)]
 				${reverse ? `` : `
 						lg:after:right-auto
 						lg:after:-translate-x-1/2
-						lg:after:left-[calc(100%_+_2.5rem_+_2px)]
+						lg:after:left-[calc(100%+2.5rem+2px)]
 					`
 				}
 
@@ -48,9 +50,9 @@ export const TimelineItem = ({ className, title, date, description, url, reverse
 
 				${className}
 			`}>
-			<h4 className="text-xl font-semibold">
+			<h3 className="text-xl font-semibold">
 				{title}
-			</h4>
+			</h3>
 			<span className={`
 						absolute
 						lg:top-[4.2rem]
@@ -58,13 +60,13 @@ export const TimelineItem = ({ className, title, date, description, url, reverse
 						text-pink-600
 						whitespace-nowrap
 
-						bottom-[calc(100%_+_1em)] lg:bottom-auto left-0
+						bottom-[calc(100%+1em)] lg:bottom-auto left-0
 
 						${reverse ? `
 								lg:left-auto
-								lg:right-[calc(100%_+_5rem)]
+								lg:right-[calc(100%+5rem)]
 							` : `
-								lg:left-[calc(100%_+_5rem)]
+								lg:left-[calc(100%+5rem)]
 							`
 						}
 					`}>
@@ -74,8 +76,7 @@ export const TimelineItem = ({ className, title, date, description, url, reverse
 				<p className="text-neutral-400 mt-6">
 					{description}
 				</p>
-			)
-			}
+			)}
 			{url && (
 				<div className="mt-6">
 					<a

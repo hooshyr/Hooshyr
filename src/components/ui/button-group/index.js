@@ -1,28 +1,22 @@
-import { useState, useEffect } from "react";
-import { ButtonGroupItem } from "./button-group-item";
+'use client'
 
-export const ButtonGroup = ({className, children, items, onChange, defaultValue, ...rest}) => {
+import { useState } from 'react'
+import { ButtonGroupItem } from './button-group-item'
 
-	const [value, setValue] = useState(items?.[0]?.value);
+export const ButtonGroup = ({ className = '', items, onChange, defaultValue }) => {
 
-	useEffect(() => {
-		if (defaultValue !== undefined) {
-			setValue(defaultValue);
-		}
-	}, [defaultValue]);
+	const [value, setValue] = useState(defaultValue ?? items?.[0]?.value)
 
 	const handleChange = (newValue) => {
 		setValue(newValue)
-		if (onChange) {
-			onChange(newValue);
-		}
+		onChange?.(newValue)
 	}
 
 	return (
 		<div className="overflow-auto w-full">
 			<div className={`flex flex-row w-full ${className}`}>
-				{items?.map((item, index) => (
-					<ButtonGroupItem key={index} onClick={() => handleChange(item.value)} active={value===item.value}>
+				{items?.map((item) => (
+					<ButtonGroupItem key={item.value} onClick={() => handleChange(item.value)} active={value === item.value}>
 						{item.label}
 					</ButtonGroupItem>
 				))}

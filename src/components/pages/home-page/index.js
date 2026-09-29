@@ -1,6 +1,5 @@
 export * from './intro'
-export * from './achivments'
+export * from './achievements'
 export * from './projects'
 export * from './biography'
-export * from './education'
 export * from './skills'

@@ -1,6 +1,6 @@
-import LottieHeartEyes from 'static/img/lottie-heart-eyes.json';
-import { Player } from '@lottiefiles/react-lottie-player';
-import { WavoTitle } from '../../../typography/wavoTitle';
+import LottieHeartEyes from '@/assets/lottie-heart-eyes.json'
+import { WavoTitle } from '@/components/typography'
+import { Lottie } from '@/components/ui'
 
 export const Biography = () => {
 	return (
@@ -10,9 +10,10 @@ export const Biography = () => {
 				<div className="text-neutral-400 leading-8 text-lg">
 					<p className="mb-4">
 						My journey began with a passion for the creation of things, and programming doubled it.
-					</p> 
+					</p>
 					<p className="mb-4">
-						I started my programming career in high school with Html and CSS. Subsequently, I learned how to implement PHP and WordPress themes and became an expert in this area.					</p>
+						I started my programming career in high school with Html and CSS. Subsequently, I learned how to implement PHP and WordPress themes and became an expert in this area.
+					</p>
 					<p className="mb-4">
 						Later on, I started studying computer engineering at the Ferdowsi University of Mashhad, and I decided to focus on my technical skills more seriously and strengthen them. So, I started learning Django and React.Js simultaneously, and after a while, I implemented various projects.
 					</p>
@@ -29,12 +30,7 @@ export const Biography = () => {
 						<span className="mr-2">
 							I love what I do!
 						</span>
-						<Player
-							autoplay
-							loop
-							src={LottieHeartEyes}
-							className="w-12"
-						/>
+						<Lottie src={LottieHeartEyes} className="w-12" />
 					</div>
 				</div>
 			</div>
